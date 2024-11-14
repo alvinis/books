@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "e011f058-1621-4863-847c-310ca8094d00",
+		"name": "books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16149555"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"un libro\",\r\n    \"author\":\"any-author\",\r\n    \"isbn\":\"any-isbn\",\r\n    \"publicationYear\":1998,\r\n    \"description\":\"any-description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/books"
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"un libro\",\r\n    \"author\":\"any-author\",\r\n    \"isbn\":\"any-isbn\",\r\n    \"publicationYear\":1998,\r\n    \"description\":\"any-description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/books/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"un libro\",\r\n    \"author\":\"any-author\",\r\n    \"isbn\":\"any-isbn\",\r\n    \"publicationYear\":1998,\r\n    \"description\":\"any-description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/books"
+			},
+			"response": []
+		},
+		{
+			"name": "search by author",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"un libro\",\r\n    \"author\":\"any-author\",\r\n    \"isbn\":\"any-isbn\",\r\n    \"publicationYear\":1998,\r\n    \"description\":\"any-description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/books?author=any",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by title",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"un libro\",\r\n    \"author\":\"any-author\",\r\n    \"isbn\":\"any-isbn\",\r\n    \"publicationYear\":1998,\r\n    \"description\":\"any-description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/books?title=un ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "un "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"otro libro\",\r\n    \"author\":\"otro-author\",\r\n    \"isbn\":\"otro-isbn\",\r\n    \"publicationYear\":2000,\r\n    \"description\":\"otro-description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/books/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get all Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/books/1"
+			},
+			"response": []
+		}
+	]
+}
